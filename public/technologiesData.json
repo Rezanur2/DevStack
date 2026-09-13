@@ -1,0 +1,202 @@
+[
+  {
+    "id": "react",
+    "name": "React",
+    "badge": "Popular",
+    "badgeType": "info",
+    "description": "A declarative, component-based JavaScript library for building modern and interactive user interfaces.",
+    "icon": "https://icon.icepanel.io/Technology/svg/React.svg",
+    "category": "Frontend",
+    "difficulty": "Beginner-Friendly",
+    "rating": 4.9
+  },
+  {
+    "id": "vuejs",
+    "name": "Vue.js",
+    "badge": "VersatFile",
+    "badgeType": "accent",
+    "description": "An approachable, performant, and versatile framework for building web user interfaces.",
+    "icon": "https://cdn.simpleicons.org/vuedotjs",
+    "category": "Frontend",
+    "difficulty": "Beginner-Friendly",
+    "rating": 4.8
+  },
+  {
+    "id": "svelte",
+    "name": "Svelte",
+    "badge": "Fast",
+    "badgeType": "secondary",
+    "description": "Cybernetically enhanced web apps with compile-time reactivity and zero virtual DOM overhead.",
+    "icon": "https://cdn.simpleicons.org/svelte",
+    "category": "Frontend",
+    "difficulty": "Intermediate",
+    "rating": 4.8
+  },
+  {
+    "id": "nextjs",
+    "name": "Next.js",
+    "badge": "SSR / Edge",
+    "badgeType": "secondary",
+    "description": "The React framework for full-stack web applications with hybrid static & server rendering.",
+    "icon": "https://icon.icepanel.io/Technology/svg/Next.js.svg",
+    "category": "Frontend",
+    "difficulty": "Intermediate",
+    "rating": 4.9
+  },
+  {
+    "id": "nodejs",
+    "name": "Node.js",
+    "badge": "Standard",
+    "badgeType": "accent",
+    "description": "An asynchronous event-driven JavaScript runtime built on Chrome's V8 engine.",
+    "icon": "https://icon.icepanel.io/Technology/svg/Node.js.svg",
+    "category": "Backend",
+    "difficulty": "Intermediate",
+    "rating": 4.8
+  },
+  {
+    "id": "postgresql",
+    "name": "PostgreSQL",
+    "badge": "Top SQL",
+    "badgeType": "primary",
+    "description": "A powerful, open-source object-relational database system with proven reliability.",
+    "icon": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg",
+    "category": "Database",
+    "difficulty": "Intermediate",
+    "rating": 4.9
+  },
+  {
+    "id": "redis",
+    "name": "Redis",
+    "badge": "Cache",
+    "badgeType": "info",
+    "description": "An in-memory dIn-memory data structure store used as a high-speed database, cache, and message broker.",
+    "icon": "https://icon.icepanel.io/Technology/svg/Redis.svg",
+    "category": "Database",
+    "difficulty": "Intermediate",
+    "rating": 4.8
+  },
+  {
+    "id": "javascript",
+    "name": "JavaScript",
+    "badge": "Ubiquitous",
+    "badgeType": "secondary",
+    "description": "The versatile, ubiquitous scripting language powering dynamic behavior across the web.",
+    "icon": "https://icon.icepanel.io/Technology/svg/JavaScript.svg",
+    "category": "Language",
+    "difficulty": "Beginner-Friendly",
+    "rating": 4.9
+  },
+  {
+    "id": "typescript",
+    "name": "TypeScript",
+    "badge": "Essential",
+    "badgeType": "info",
+    "description": "A strongly typed programming language that builds on JavaScript for robust tooling.",
+    "icon": "https://icon.icepanel.io/Technology/svg/TypeScript.svg",
+    "category": "Language",
+    "difficulty": "Intermediate",
+    "rating": 4.9
+  },
+  {
+    "id": "java",
+    "name": "Java",
+    "badge": "Robust",
+    "badgeType": "info",
+    "description": "A secure, object-oriented programming language designed for portability and scale.",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+    "category": "Language",
+    "difficulty": "Intermediate",
+    "rating": 4.6
+  },
+  {
+    "id": "tailwindcss",
+    "name": "Tailwind CSS",
+    "badge": "Modern",
+    "badgeType": "accent",
+    "description": "A utility-first CSS framework packed with classes that can be composed to build custom UI.",
+    "icon": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
+    "category": "Styling",
+    "difficulty": "Beginner-Friendly",
+    "rating": 4.9
+  },
+  {
+    "id": "docker",
+    "name": "Docker",
+    "badge": "Containers",
+    "badgeType": "info",
+    "description": "A platform designed to build, share, and run containerized applications reliably.",
+    "icon": "https://icon.icepanel.io/Technology/svg/Docker.svg",
+    "category": "DevOps",
+    "difficulty": "Intermediate",
+    "rating": 4.9
+  },
+  {
+    "id": "express",
+    "name": "Express.js",
+    "badge": "Lightweight",
+    "badgeType": "secondary",
+    "description": "A minimal and flexible Node.js web framework for building APIs and server-side applications.",
+    "icon": "https://icon.icepanel.io/Technology/svg/Express.svg",
+    "category": "Backend",
+    "difficulty": "Beginner-Friendly",
+    "rating": 4.7
+  },
+
+  {
+    "id": "mongodb",
+    "name": "MongoDB",
+    "badge": "NoSQL",
+    "badgeType": "info",
+    "description": "A document-oriented NoSQL database designed for flexible data models and scalable application development.",
+    "icon": "https://icon.icepanel.io/Technology/svg/MongoDB.svg",
+    "category": "Database",
+    "difficulty": "Beginner-Friendly",
+    "rating": 4.7
+  },
+
+  {
+    "id": "nginx",
+    "name": "Nginx",
+    "badge": "Production",
+    "badgeType": "primary",
+    "description": "A high-performance web server and reverse proxy commonly used for serving applications and handling web traffic.",
+    "icon": "https://icon.icepanel.io/Technology/svg/NGINX.svg",
+    "category": "DevOps",
+    "difficulty": "Advanced",
+    "rating": 4.6
+  },
+  {
+    "id": "git",
+    "name": "Git",
+    "badge": "Essential",
+    "badgeType": "accent",
+    "description": "A distributed version control system that helps developers track changes and collaborate efficiently on projects.",
+    "icon": "https://icon.icepanel.io/Technology/svg/Git.svg",
+    "category": "Tools",
+    "difficulty": "Beginner-Friendly",
+    "rating": 4.9
+  },
+  {
+    "id": "github",
+    "name": "GitHub",
+    "badge": "Essential",
+    "badgeType": "secondary",
+    "description": "A developer platform for hosting Git repositories, collaborating on code, and managing software projects.",
+    "icon": "https://icon.icepanel.io/Technology/svg/GitHub.svg",
+    "category": "Tools",
+    "difficulty": "Beginner-Friendly",
+    "rating": 4.9
+  },
+  {
+    "id": "vite",
+    "name": "Vite",
+    "badge": "Fast",
+    "badgeType": "info",
+    "description": "A modern frontend build tool that provides fast development server startup and optimized production builds.",
+    "icon": "https://icon.icepanel.io/Technology/svg/Vite.js.svg",
+    "category": "Tools",
+    "difficulty": "Beginner-Friendly",
+    "rating": 4.8
+  }
+]
