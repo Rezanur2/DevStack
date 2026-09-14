@@ -3,7 +3,7 @@ import HeroImage from '../assets/banner-stack.png'
 const Banner = () => {
     return (
         <div className='container mx-auto px-2'>
-            <div className='w-auto grid grid-cols-1 lg:grid-cols-2 items-center py-12 px-4 sm:px-6 lg:px-8'>
+            <div className='w-auto grid grid-cols-1 lg:grid-cols-2 items-center py-12 px-4'>
                 {/* left side */}
                 <div className='space-y-6 max-lg:flex max-lg:flex-col max-lg:text-center max-lg:px-5 items-center'>
                     <h1 className='text-3xl sm:text-4xl lg:text-5xl font-bold lg:font-extrabold text-[#030712] lg:text-[#0F172A] [leading:37.5px] lg:[leading:60px] [letter-spacing:-0.75px] lg:[letter-spacing:-1.5px]'>

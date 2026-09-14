@@ -10,7 +10,7 @@ interface TechnologiesProps {
 const Technologies = ({ technologiesPromise }:TechnologiesProps) => {
     const technologies = use(technologiesPromise);
     return (
-        <div className='container mx-auto px-10'>
+        <div className='container mx-auto px-6'>
 
             <div className='flex justify-between gap-4 mb-2'>
                 <div className='space-y-2 mb-10'>
