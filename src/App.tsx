@@ -5,6 +5,7 @@ import Technologies from "./components/technologies/Technologies";
 import type { Itechonology } from "./technologyType";
 import { ToastContainer } from "react-toastify";
 import { ClipLoader } from "react-spinners";
+import Footer from "./Footer";
 
 const technologiesFetch = async ():Promise<Itechonology[]> => {
   const res = await fetch('/technologiesData.json');
@@ -22,6 +23,7 @@ function App() {
         <Technologies technologiesPromise={technologiesPromise} />
       </Suspense>
       <ToastContainer />
+      <Footer />
     </>
   )
 }

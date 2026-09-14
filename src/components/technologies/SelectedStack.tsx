@@ -10,7 +10,7 @@ interface SelectedStackProps{
 const SelectedStack = ({ selectedStacks, setSelectedStacks }: SelectedStackProps) => {
     
     const handleRemove = (technology: Itechonology) => {
-        const totalSelectedStacks = selectedStacks.filter((selectedStack) => selectedStack.name != technology.name);
+        const totalSelectedStacks = selectedStacks.filter((selectedStack) => selectedStack.name !== technology.name);
         setSelectedStacks(totalSelectedStacks);
         toast.warn(`${technology.name} removed from stack!`);
     };
@@ -31,8 +31,8 @@ const SelectedStack = ({ selectedStacks, setSelectedStacks }: SelectedStackProps
                 </p>
             </div>
                 {
-                    selectedStacks.length === 0 ? <div className="border border-dashed border-[#CBD5E1] rounded-xl h-24 flex items-center justify-center card bg-base-100 card-xs shadow-sm">
-                        <p className="text-sm text-[#94A3B8]">Your stack is empty.</p>
+                    selectedStacks.length === 0 ? <div className="border border-dashed border-[#CBD5E1] rounded-xl h-12 lg:h-24 flex items-center justify-center card bg-base-100 card-xs shadow-sm">
+                        <p className="text-xs lg:text-sm text-[#94A3B8]">Your stack is empty.</p>
                     </div>
                     :
                     <div className="space-y-3">
@@ -42,7 +42,7 @@ const SelectedStack = ({ selectedStacks, setSelectedStacks }: SelectedStackProps
                                     <div className="card-body">
                                         <div className="flex  justify-between items-center gap-3">
                                             <div className='flex gap-1 lg:gap-5'>
-                                                <img src={technology.icon} alt={technology.name} className="w-8 lg:w-10" />
+                                                <img src={technology.icon} alt={technology.name} className="w-6 lg:w-10" />
                                                 <div>
                                                     <h4 className="font-bold md:text-[12px] lg:text-[16px] text-[#0F172A]">
                                                     {technology.name}

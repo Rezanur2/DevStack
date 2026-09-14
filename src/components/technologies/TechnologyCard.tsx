@@ -24,7 +24,7 @@ const TechnologyCard = ({ technology, selectedStacks, setSelectedStacks }: Techn
                 <figure className='flex justify-between px-6 md:px-3 pt-4'>
                     <img
                     src={technology.icon} className='w-10'
-                    alt="" />
+                    alt={technology.name} />
                     <div className={`font-bold rounded-2xl badge badge-soft max-md:text-[12px] ${technology.badgeType}`}> {technology.badge}</div>
                 </figure>
                 <div className="card-body space-y-1.5 md:px-3 pb-5">
