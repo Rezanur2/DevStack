@@ -1,15 +1,27 @@
 import React from 'react';
 import type { Itechonology } from '../../technologyType';
 import { IoIosStar } from 'react-icons/io';
+import { toast } from 'react-toastify';
 
-const TechnologyCard = ({technology}:{technology:Itechonology}) => {
+interface TechnologyCardProps {
+    technology: Itechonology;
+    selectedStacks: Itechonology[];
+    setSelectedStacks: React.Dispatch<React.SetStateAction<Itechonology[]>>;
+}
+
+const TechnologyCard = ({ technology, selectedStacks, setSelectedStacks }: TechnologyCardProps) => {
+
+    const handleAddToStack = (technology: Itechonology) => {
+        setSelectedStacks([...selectedStacks, technology])
+        toast.success(`${technology.name} added to stack!`)
+    }
     return (
             <div className="card h-full bg-base-100 shadow-sm hover:shadow-lg transition-shadow duration-300">
                 <figure className='flex justify-between px-6 md:px-3 pt-4'>
                     <img
                     src={technology.icon} className='w-10'
                     alt="" />
-                    <div className={`font-bold rounded-2xl badge badge-soft ${technology.badgeType}`}> {technology.badge}</div>
+                    <div className={`font-bold rounded-2xl badge badge-soft max-md:text-[12px] ${technology.badgeType}`}> {technology.badge}</div>
                 </figure>
                 <div className="card-body space-y-1.5 md:px-3 pb-5">
                     <h2 className="card-title font-bold text-xl">{technology.name}</h2>
@@ -28,7 +40,7 @@ const TechnologyCard = ({technology}:{technology:Itechonology}) => {
                             <h4 className="font-bold max-md:text-[#F59E0B] ">{technology.rating}</h4>
                         </div>
                     </div>
-                    <button className='btn btn-neutral'>Add to Stack</button>
+                    <button onClick={()=> handleAddToStack(technology)} className='btn btn-neutral'>Add to Stack</button>
                 </div>
             </div>
     );
