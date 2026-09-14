@@ -11,7 +11,11 @@ interface TechnologyCardProps {
 
 const TechnologyCard = ({ technology, selectedStacks, setSelectedStacks }: TechnologyCardProps) => {
 
+    const isAdded = selectedStacks.includes(technology);
     const handleAddToStack = (technology: Itechonology) => {
+        if (isAdded) {
+            return;
+        }
         setSelectedStacks([...selectedStacks, technology])
         toast.success(`${technology.name} added to stack!`)
     }
@@ -40,7 +44,13 @@ const TechnologyCard = ({ technology, selectedStacks, setSelectedStacks }: Techn
                             <h4 className="font-bold max-md:text-[#F59E0B] ">{technology.rating}</h4>
                         </div>
                     </div>
-                    <button onClick={()=> handleAddToStack(technology)} className='btn btn-neutral'>Add to Stack</button>
+                <button
+                    onClick={()=>handleAddToStack(technology)}
+                    className={`btn btn-neutral`}
+                    disabled={isAdded}
+                >
+                    {isAdded ? "✓ Added to Stack" : "Add to Stack"}
+                </button>
                 </div>
             </div>
     );

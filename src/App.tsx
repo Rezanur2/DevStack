@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar"
 import Technologies from "./components/technologies/Technologies";
 import type { Itechonology } from "./technologyType";
 import { ToastContainer } from "react-toastify";
+import { ClipLoader } from "react-spinners";
 
 const technologiesFetch = async ():Promise<Itechonology[]> => {
   const res = await fetch('/technologiesData.json');
@@ -17,7 +18,7 @@ function App() {
     <>
       <Navbar />
       <Banner />
-      <Suspense fallback={<h2>Loading.........</h2>}>
+      <Suspense fallback={<ClipLoader color="#22d3ee" size={44} />}>
         <Technologies technologiesPromise={technologiesPromise} />
       </Suspense>
       <ToastContainer />

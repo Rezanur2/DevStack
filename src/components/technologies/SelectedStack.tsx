@@ -1,7 +1,23 @@
 import React from 'react';
 import type { Itechonology } from '../../technologyType';
+import { toast } from 'react-toastify';
 
-const SelectedStack = ({selectedStacks}:{selectedStacks:Itechonology[]}) => {
+interface SelectedStackProps{
+    selectedStacks: Itechonology[]
+    setSelectedStacks: React.Dispatch<React.SetStateAction<Itechonology[]>>
+}
+
+const SelectedStack = ({ selectedStacks, setSelectedStacks }: SelectedStackProps) => {
+    
+    const handleRemove = (technology: Itechonology) => {
+        const totalSelectedStacks = selectedStacks.filter((selectedStack) => selectedStack.name != technology.name);
+        setSelectedStacks(totalSelectedStacks);
+        toast.warn(`${technology.name} removed from stack!`);
+    };
+    const handleRemoveAll = () => {
+        setSelectedStacks([]);
+        toast.warn('All technologies removed from stack!');
+    };
     return (
         <div className="card bg-base-100 border border-base-200 shadow-sm p-4">
             <div className="mb-4">
@@ -21,8 +37,8 @@ const SelectedStack = ({selectedStacks}:{selectedStacks:Itechonology[]}) => {
                     :
                     <div className="space-y-3">
                         {
-                            selectedStacks.map((technology) => (
-                                <div className="card bg-base-100 card-xs shadow-sm">
+                            selectedStacks.map((technology,ind) => (
+                                <div key={ind} className="card bg-base-100 card-xs shadow-sm">
                                     <div className="card-body">
                                         <div className="flex  justify-between items-center gap-3">
                                             <div className='flex gap-1 lg:gap-5'>
@@ -36,7 +52,7 @@ const SelectedStack = ({selectedStacks}:{selectedStacks:Itechonology[]}) => {
                                                 </p>
                                                 </div>
                                             </div>
-                                            <button className="btn btn-xs lg:btn-sm badge-accent">
+                                            <button onClick={()=>handleRemove(technology)} className="btn btn-xs lg:btn-sm badge-accent">
                                                 X
                                             </button>
                                         </div>
@@ -44,11 +60,15 @@ const SelectedStack = ({selectedStacks}:{selectedStacks:Itechonology[]}) => {
                                 </div>
                             ))
                         }
+                        {selectedStacks.length > 0 && (
+                            <div className="mt-2">
+                                <button onClick={handleRemoveAll} className="btn btn-soft btn-wide btn-secondary">
+                                    Remove all
+                                </button>
+                            </div>)
+                        }
                     </div>
                 }
-            <div className='mt-2'>
-                <button className="btn btn-soft btn-wide btn-secondary">Remove all</button>
-            </div>
         </div>
     );
 };

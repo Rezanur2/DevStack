@@ -23,7 +23,7 @@ const AvailableTechnologies = ({ technologies }:{technologies:Itechonology[]}) =
                 }
             </div>
             <div className='col-span-1'>
-                 <SelectedStack selectedStacks={selectedStacks} />
+                 <SelectedStack selectedStacks={selectedStacks} setSelectedStacks={setSelectedStacks} />
             </div>
         </div>
     );
